@@ -1,0 +1,6 @@
+accordion:
+  js:
+    js/par_accordion.js: { preprocess: false }
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
