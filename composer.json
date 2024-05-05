@@ -1,5 +1,5 @@
 {
-    "name": "nubay_services/par_accordion",
+    "name": "handmangroup/par_accordion",
     "description": "Creates an accordion paragraph type",
     "type": "drupal-module",
     "authors": [
