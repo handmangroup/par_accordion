@@ -2,7 +2,7 @@
 
     'use strict';
     //////////////// Accordion - Click to open/collapse
-    Drupal.behaviors.Accordion = {
+    Drupal.behaviors.accordion = {
         attach: function (context, settings) {
             $('.accordion-title').click(function(){
                 var accordion = $(this).closest('.accordion');
