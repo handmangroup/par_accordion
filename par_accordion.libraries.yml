@@ -1,4 +1,7 @@
 accordion:
+  css:
+    theme:
+      css/par_accordion.css: { }
   js:
     js/par_accordion.js: { preprocess: false }
   dependencies:
