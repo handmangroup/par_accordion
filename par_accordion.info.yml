@@ -24,4 +24,4 @@ dependencies:
   - drupal:media_library
   - field_group:field_group
   - ui_styles:ui_styles
-  - ui_styles_paragraphs:ui_styles_paragraphs
+  - ui_styles_paragraphs:ui_styles_paragraphs  
