@@ -3,7 +3,7 @@ accordion:
     theme:
       css/par_accordion.css: { }
   js:
-    js/par_accordion.js: { preprocess: false }
+    js/par_accordion.js: { }
   dependencies:
     - core/jquery
     - core/drupalSettings

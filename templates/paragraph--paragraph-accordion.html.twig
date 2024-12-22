@@ -38,18 +38,19 @@
  * @ingroup themeable
  */
 #}
+{# Generate a unique accordion ID as a string #}
 {% set style_class = content.field_paragraph_accordion_style['#items'].getString() %}
 {%
   set classes = [
-    'paragraph',
-    'paragraph--type--' ~ paragraph.bundle|clean_class,
-    paragraph.field_paragraph_extra_class.value|render|trim,
-    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class
-  ]
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  paragraph.field_paragraph_extra_class.value|render|trim,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class
+]
 %}
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
-    <ul class="accordion accordion-wrapper {{ style_class }} {% if paragraph.field_paragraph_multiple_open.value|render|trim == false %}accordion-oneopen{% endif %}">
+    <ul id="{{ accordion_id }}" class="accordion accordion-wrapper {{ style_class }}">
       {{ content.field_paragraph_items }}
     </ul>
   </div>

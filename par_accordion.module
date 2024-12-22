@@ -27,3 +27,16 @@ function par_accordion_theme($existing, $type, $theme, $path) {
     ],
   ];
 }
+
+function par_accordion_preprocess_paragraph(&$variables) {
+  if ($variables['paragraph']->bundle() === 'paragraph_accordion') {
+    $variables['accordion_id'] = $variables['paragraph']->bundle() . '-' . $variables['paragraph']->id();
+  }
+
+  if ($variables['paragraph']->bundle() === 'paragraph_accordion_item') {
+    $parent = $variables['paragraph']->getParentEntity();
+    if ($parent) {
+      $variables['accordion_id'] = $parent->bundle() . '-' . $parent->id();
+    }
+  }
+}
