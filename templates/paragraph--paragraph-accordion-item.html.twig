@@ -41,15 +41,16 @@
 {# Get the accordion_id from the context #}
 {% set paragraph_id = 'accordion-' ~ paragraph.id.value %}
 
-<li class="accordion-item">
-  <div class="accordion-header" id="header-{{ paragraph_id }}">
-    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#{{ paragraph_id }}" aria-expanded="false" aria-controls="{{ paragraph_id }}">
+<li class="card accordion-item" >
+  <div class="accordion-header card-header" id="header-{{ paragraph_id }}">
+    <button class="accordion-button is-collapsed" type="button" data-target="#{{ paragraph_id }}" >
       {{ content.field_paragraph_item_title }}
     </button>
   </div>
-  <div id="{{ paragraph_id }}" class="accordion-collapse collapse" aria-labelledby="header-{{ paragraph_id }}">
+  <div id="{{ paragraph_id }}" class="accordion-collapse {% if paragraph.field_paragraph_item_active.value == '1' %}is-open{% endif %}" aria-labelledby="header-{{ paragraph_id }}">
     <div class="accordion-body">
       {{ content|without('field_paragraph_item_title', 'field_paragraph_item_active') }}
     </div>
   </div>
 </li>
+

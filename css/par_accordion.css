@@ -174,3 +174,11 @@ ul.accordion li .accordion__title .field--name-field-paragraph-item-title {
 .accordion-collapse > .card-footer {
     background: #273444;
     padding: 0; }
+
+
+.accordion-collapse {
+    display: none;
+}
+.accordion-collapse.is-open {
+    display: block;
+}
